@@ -39,4 +39,19 @@ public class LinkedList {
         }
         currentNode.next = newNode;
     }
+    /*
+     * This is the method to display elements
+     */
+    public void printList() {
+        if (head == null) {
+            System.out.println("list is empty");
+            return;
+        }
+        Node currentNode = head;
+        while (currentNode != null) {
+            System.out.print(currentNode.data + " -> ");    // print the currentNode data
+            currentNode = currentNode.next;                 // update the current node
+        }
+        System.out.println("NULL");                         // print the null
+    }
 }
